@@ -1,0 +1,23 @@
+/dataset/
+/models/
+/models_*/
+
+# Notebook artifacts
+.ipynb_checkpoints/
+
+# Python cache
+__pycache__/
+*.py[cod]
+*.pyd
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Common local tooling files
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.idea/
+.vscode/
