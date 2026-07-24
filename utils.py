@@ -65,8 +65,27 @@ def load_json(input_path: str | Path) -> Any:
         return json.load(json_file)
 
 
-# Função específica para salvar resumos (summary) de pipelines em JSON.
-def save_pipeline_summary_json(output_path: str | Path, payload: Any) -> Path:
+# Função compatível com o formato novo e com o formato legado usado nos notebooks.
+def save_pipeline_summary_json(output_path: str | Path, *args: Any) -> Path:
+    if len(args) == 1:
+        payload = args[0]
+    elif len(args) == 7:
+        pipeline_name, scores, mean_acc, std_acc, laser, labels, n_splits = args
+        payload = {
+            "pipeline": pipeline_name,
+            "laser": laser,
+            "labels": [str(label) for label in labels],
+            "n_splits": n_splits,
+            "accuracy_scores": [float(score) for score in scores],
+            "mean_accuracy": float(mean_acc),
+            "std_accuracy": float(std_acc),
+        }
+    else:
+        raise TypeError(
+            "save_pipeline_summary_json espera 1 argumento (payload) ou 7 argumentos "
+            "no formato legado."
+        )
+
     return save_json(output_path, payload)
 
 
