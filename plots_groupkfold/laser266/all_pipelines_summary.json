@@ -9,6 +9,7 @@
   "pipelines": [
     {
       "pipeline": "none_svm_linear",
+      "laser": 266,
       "labels": [
         "A",
         "R"
@@ -29,6 +30,7 @@
     },
     {
       "pipeline": "none_random_forest",
+      "laser": 266,
       "labels": [
         "A",
         "R"
@@ -49,6 +51,7 @@
     },
     {
       "pipeline": "none_pls_da",
+      "laser": 266,
       "labels": [
         "A",
         "R"
@@ -69,6 +72,7 @@
     },
     {
       "pipeline": "snv_svm_linear",
+      "laser": 266,
       "labels": [
         "A",
         "R"
@@ -89,6 +93,7 @@
     },
     {
       "pipeline": "snv_random_forest",
+      "laser": 266,
       "labels": [
         "A",
         "R"
@@ -109,6 +114,7 @@
     },
     {
       "pipeline": "snv_pls_da",
+      "laser": 266,
       "labels": [
         "A",
         "R"
@@ -129,6 +135,7 @@
     },
     {
       "pipeline": "savgol_snv_svm_linear",
+      "laser": 266,
       "labels": [
         "A",
         "R"
@@ -149,6 +156,7 @@
     },
     {
       "pipeline": "savgol_snv_random_forest",
+      "laser": 266,
       "labels": [
         "A",
         "R"
@@ -169,6 +177,7 @@
     },
     {
       "pipeline": "savgol_snv_pls_da",
+      "laser": 266,
       "labels": [
         "A",
         "R"
