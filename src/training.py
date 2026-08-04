@@ -5,12 +5,10 @@ from __future__ import annotations
 from pathlib import Path
 from typing import Any
 
-import joblib
-import numpy as np
-from sklearn.model_selection import cross_val_predict, cross_val_score
-from sklearn.pipeline import Pipeline
+# numpy is imported locally where needed to avoid import-time dependency failures
+# Defer sklearn imports to function scope to avoid import-time failures
 
-from evaluation import (
+from src.evaluation import (
     build_pipeline_summary,
     plot_ranking,
     save_confusion_matrix_plot,
@@ -20,6 +18,8 @@ from evaluation import (
 
 
 def build_pipeline(preprocess_steps, model):
+    from sklearn.pipeline import Pipeline
+
     return Pipeline([
         *preprocess_steps,
         ("model", model),
@@ -27,6 +27,8 @@ def build_pipeline(preprocess_steps, model):
 
 
 def evaluate_pipeline(pipe, X, y, cv, groups=None, scoring: str = "accuracy"):
+    from sklearn.model_selection import cross_val_predict, cross_val_score
+
     if groups is None:
         scores = cross_val_score(pipe, X, y, cv=cv, scoring=scoring)
         y_pred = cross_val_predict(pipe, X, y, cv=cv)
@@ -38,6 +40,11 @@ def evaluate_pipeline(pipe, X, y, cv, groups=None, scoring: str = "accuracy"):
 
 
 def save_trained_pipeline(pipe, output_path: str | Path):
+    try:
+        import joblib
+    except Exception:
+        raise ImportError("joblib is required to save trained pipelines. Install with `pip install joblib`.")
+
     joblib.dump(pipe, output_path)
     return output_path
 

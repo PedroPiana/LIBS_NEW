@@ -5,14 +5,12 @@ from __future__ import annotations
 from pathlib import Path
 from typing import Any, Iterable
 
-import matplotlib.pyplot as plt
-import numpy as np
-from sklearn.metrics import ConfusionMatrixDisplay, confusion_matrix
 
-from utils import save_pipeline_summary_json
 
 
 def compute_confusion_matrix(y_true, y_pred):
+    from sklearn.metrics import confusion_matrix
+
     return confusion_matrix(y_true, y_pred)
 
 
@@ -23,6 +21,9 @@ def save_confusion_matrix_plot(
     title: str,
     display_labels: Iterable[str],
 ):
+    import matplotlib.pyplot as plt
+    from sklearn.metrics import ConfusionMatrixDisplay
+
     cm = compute_confusion_matrix(y_true, y_pred)
     disp = ConfusionMatrixDisplay(confusion_matrix=cm, display_labels=list(display_labels))
 
@@ -56,6 +57,8 @@ def build_pipeline_summary(
 
 
 def save_pipeline_summary(output_path: str | Path, summary: dict[str, Any]):
+    from src.utils import save_pipeline_summary_json
+
     return save_pipeline_summary_json(output_path, summary)
 
 
@@ -74,6 +77,8 @@ def save_consolidated_summary(
         "n_splits": n_splits,
         "pipelines": pipeline_summaries,
     }
+    from src.utils import save_pipeline_summary_json
+
     return save_pipeline_summary_json(output_path, summary)
 
 
@@ -86,6 +91,8 @@ def plot_ranking(
 ):
     if not results:
         return None
+
+    import matplotlib.pyplot as plt
 
     names = list(results.keys())
     values = list(results.values())
