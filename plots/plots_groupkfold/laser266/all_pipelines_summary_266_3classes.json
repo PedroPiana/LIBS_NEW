@@ -1,0 +1,144 @@
+{
+  "experiment": "stratified_groupkfold_266_3classes",
+  "laser": 266,
+  "labels": [
+    "Arabica",
+    "Arabica Moca",
+    "Robusta"
+  ],
+  "n_splits": 8,
+  "pipelines": [
+    {
+      "pipeline": "none_svm_linear",
+      "laser": 266,
+      "labels": [
+        "Arabica",
+        "Arabica Moca",
+        "Robusta"
+      ],
+      "n_splits": 8,
+      "accuracy_scores": [
+        0.51,
+        0.0,
+        1.0,
+        1.0,
+        0.915,
+        0.995,
+        0.72,
+        0.645
+      ],
+      "mean_accuracy": 0.723125,
+      "std_accuracy": 0.32374698357668136
+    },
+    {
+      "pipeline": "none_random_forest",
+      "laser": 266,
+      "labels": [
+        "Arabica",
+        "Arabica Moca",
+        "Robusta"
+      ],
+      "n_splits": 8,
+      "accuracy_scores": [
+        0.6566666666666666,
+        0.235,
+        0.635,
+        0.785,
+        0.745,
+        0.875,
+        0.535,
+        0.705
+      ],
+      "mean_accuracy": 0.6464583333333334,
+      "std_accuracy": 0.1825236618983352
+    },
+    {
+      "pipeline": "snv_svm_linear",
+      "laser": 266,
+      "labels": [
+        "Arabica",
+        "Arabica Moca",
+        "Robusta"
+      ],
+      "n_splits": 8,
+      "accuracy_scores": [
+        0.54,
+        0.0,
+        1.0,
+        1.0,
+        0.9,
+        0.995,
+        0.805,
+        0.65
+      ],
+      "mean_accuracy": 0.7362500000000001,
+      "std_accuracy": 0.3212548637764104
+    },
+    {
+      "pipeline": "snv_random_forest",
+      "laser": 266,
+      "labels": [
+        "Arabica",
+        "Arabica Moca",
+        "Robusta"
+      ],
+      "n_splits": 8,
+      "accuracy_scores": [
+        0.8066666666666666,
+        0.315,
+        0.655,
+        0.765,
+        0.65,
+        0.96,
+        0.63,
+        0.74
+      ],
+      "mean_accuracy": 0.6902083333333333,
+      "std_accuracy": 0.1738123139657001
+    },
+    {
+      "pipeline": "savgol_snv_svm_linear",
+      "laser": 266,
+      "labels": [
+        "Arabica",
+        "Arabica Moca",
+        "Robusta"
+      ],
+      "n_splits": 8,
+      "accuracy_scores": [
+        0.47,
+        0.0,
+        0.995,
+        1.0,
+        0.73,
+        0.995,
+        0.855,
+        0.66
+      ],
+      "mean_accuracy": 0.713125,
+      "std_accuracy": 0.3225090841743841
+    },
+    {
+      "pipeline": "savgol_snv_random_forest",
+      "laser": 266,
+      "labels": [
+        "Arabica",
+        "Arabica Moca",
+        "Robusta"
+      ],
+      "n_splits": 8,
+      "accuracy_scores": [
+        0.67,
+        0.3,
+        0.685,
+        0.78,
+        0.57,
+        0.97,
+        0.6,
+        0.755
+      ],
+      "mean_accuracy": 0.66625,
+      "std_accuracy": 0.1807060804178985
+    }
+  ]
+}

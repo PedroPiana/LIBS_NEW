@@ -29,4 +29,9 @@ def ensure_dirs(dirs: Iterable[Path] | None = None) -> None:
         Path(d).mkdir(parents=True, exist_ok=True)
 
 
-__all__ = ["BASE_DIR", "DATA_DIR", "MODELS_DIR", "PLOTS_DIR", "RANDOM_SEED", "LASERS", "ensure_dirs"]
+def list_dirs():
+    print("BASE_DIR: ", BASE_DIR, "\nDATA_DIR: ",DATA_DIR, "\nMODELS_DIR: ", MODELS_DIR, 
+          "\nPLOTS_DIR:", PLOTS_DIR)
+
+
+__all__ = ["BASE_DIR", "DATA_DIR", "MODELS_DIR", "PLOTS_DIR", "RANDOM_SEED", "LASERS", "list_dirs","ensure_dirs"]
