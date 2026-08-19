@@ -1,0 +1,200 @@
+{
+  "experiment": "stratified_groupkfold_binary",
+  "laser": 266,
+  "labels": [
+    "A",
+    "R"
+  ],
+  "n_splits": 8,
+  "pipelines": [
+    {
+      "pipeline": "none_svm_linear",
+      "laser": 266,
+      "labels": [
+        "A",
+        "R"
+      ],
+      "n_splits": 8,
+      "accuracy_scores": [
+        1.0,
+        1.0,
+        1.0,
+        0.985,
+        0.995,
+        0.995,
+        0.96,
+        1.0
+      ],
+      "mean_accuracy": 0.9918750000000001,
+      "std_accuracy": 0.012975337182516696
+    },
+    {
+      "pipeline": "none_random_forest",
+      "laser": 266,
+      "labels": [
+        "A",
+        "R"
+      ],
+      "n_splits": 8,
+      "accuracy_scores": [
+        0.9966666666666667,
+        1.0,
+        0.99,
+        0.99,
+        0.98,
+        0.95,
+        0.945,
+        1.0
+      ],
+      "mean_accuracy": 0.9814583333333333,
+      "std_accuracy": 0.020572323303679436
+    },
+    {
+      "pipeline": "none_pls_da",
+      "laser": 266,
+      "labels": [
+        "A",
+        "R"
+      ],
+      "n_splits": 8,
+      "accuracy_scores": [
+        0.92,
+        0.995,
+        0.925,
+        0.895,
+        0.95,
+        0.935,
+        0.94,
+        0.85
+      ],
+      "mean_accuracy": 0.92625,
+      "std_accuracy": 0.03935019059674298
+    },
+    {
+      "pipeline": "snv_svm_linear",
+      "laser": 266,
+      "labels": [
+        "A",
+        "R"
+      ],
+      "n_splits": 8,
+      "accuracy_scores": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        0.995,
+        0.995,
+        0.96,
+        1.0
+      ],
+      "mean_accuracy": 0.99375,
+      "std_accuracy": 0.012930100540985763
+    },
+    {
+      "pipeline": "snv_random_forest",
+      "laser": 266,
+      "labels": [
+        "A",
+        "R"
+      ],
+      "n_splits": 8,
+      "accuracy_scores": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        0.96,
+        0.92,
+        1.0
+      ],
+      "mean_accuracy": 0.985,
+      "std_accuracy": 0.0278388218141501
+    },
+    {
+      "pipeline": "snv_pls_da",
+      "laser": 266,
+      "labels": [
+        "A",
+        "R"
+      ],
+      "n_splits": 8,
+      "accuracy_scores": [
+        1.0,
+        0.99,
+        0.71,
+        0.945,
+        0.855,
+        0.995,
+        1.0,
+        1.0
+      ],
+      "mean_accuracy": 0.9368749999999999,
+      "std_accuracy": 0.09772210279665497
+    },
+    {
+      "pipeline": "savgol_snv_svm_linear",
+      "laser": 266,
+      "labels": [
+        "A",
+        "R"
+      ],
+      "n_splits": 8,
+      "accuracy_scores": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        0.995,
+        0.94,
+        1.0
+      ],
+      "mean_accuracy": 0.9918750000000001,
+      "std_accuracy": 0.019675095298371508
+    },
+    {
+      "pipeline": "savgol_snv_random_forest",
+      "laser": 266,
+      "labels": [
+        "A",
+        "R"
+      ],
+      "n_splits": 8,
+      "accuracy_scores": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        0.955,
+        0.92,
+        1.0
+      ],
+      "mean_accuracy": 0.984375,
+      "std_accuracy": 0.02844265063245688
+    },
+    {
+      "pipeline": "savgol_snv_pls_da",
+      "laser": 266,
+      "labels": [
+        "A",
+        "R"
+      ],
+      "n_splits": 8,
+      "accuracy_scores": [
+        1.0,
+        1.0,
+        0.79,
+        0.93,
+        0.51,
+        0.945,
+        1.0,
+        1.0
+      ],
+      "mean_accuracy": 0.8968750000000001,
+      "std_accuracy": 0.16087529137502748
+    }
+  ]
+}
