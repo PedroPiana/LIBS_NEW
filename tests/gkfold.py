@@ -51,29 +51,29 @@ def prepare_dataset(laser: int, data_root: Path) -> Tuple:
             if (yi.startswith("A") and num is not None and num <= 12) or yi in extra_a_labels_266:
                 X.append(xi)
                 y.append("A")
-                groups.append(str(num) if num is not None else yi)
+                groups.append(yi)
             elif yi.startswith("R") and num is not None and num <= 9:
                 X.append(xi)
                 y.append("R")
-                groups.append(str(num))
+                groups.append(yi)
         elif laser == 532:
             if yi.startswith("A") and num is not None and num <= 8:
                 X.append(xi)
                 y.append("A")
-                groups.append(str(num))
+                groups.append(yi)
             elif yi.startswith("R") and num is not None and num <= 8:
                 X.append(xi)
                 y.append("R")
-                groups.append(str(num))
+                groups.append(yi)
         else:
             if yi.startswith("A") and num is not None and num <= 12:
                 X.append(xi)
                 y.append("A")
-                groups.append(str(num))
+                groups.append(yi)
             elif yi.startswith("R") and num is not None and num <= 9:
                 X.append(xi)
                 y.append("R")
-                groups.append(str(num))
+                groups.append(yi)
 
     X = np.array(X)
     y = np.array(y)

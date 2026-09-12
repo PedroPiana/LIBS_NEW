@@ -1,10 +1,7 @@
-Organizacao recomendada do projeto
+Organização dos códigos
 
-Baseado na revisao dos notebooks [pipeline.ipynb](pipeline.ipynb), [gkfold.ipynb](gkfold.ipynb) e [tabela.ipynb](tabela.ipynb), o principal ponto de melhoria e a repeticao de imports, classes auxiliares e funcoes de apoio em varios blocos. Isso torna o projeto mais dificil de manter, testar e reutilizar.
-
-1. Estrutura sugerida
-
-Sugestao de organizacao de pastas:
+1. Estrutura 
+organizacao de pastas:
 
 project/
   dataset/
@@ -58,67 +55,4 @@ plotting.py
 
 config.py
 - Constantes do projeto: caminhos, nomes de lasers, sementes, parametros padrao, colunas, listas de modelos e configuracoes por experimento.
-- Evite deixar numeros magicos espalhados no notebook.
 
-3. O que deve ficar nos notebooks
-
-Os notebooks devem servir para:
-- Explorar dados.
-- Testar ideias.
-- Rodar experimentos de forma legivel.
-- Mostrar resultados finais.
-
-Eles nao devem conter:
-- Classes repetidas.
-- Imports duplicados em varios blocos.
-- Funcoes auxiliares copiadas e coladas.
-- Logica de treino muito longa misturada com visualizacao.
-
-4. Regras de organizacao
-
-- Cada funcao deve ter uma responsabilidade unica.
-- Se uma funcao fica grande demais, ela deve ser quebrada em partes menores.
-- Se a mesma logica aparece em dois notebooks, ela deve virar funcao.
-- Use nomes consistentes em portugues ou ingles, mas nao misture os dois sem necessidade.
-- Mantenha uma ordem fixa: imports, constantes, funcoes, classes, execucao.
-- Parametros importantes devem vir de `config.py` ou de um arquivo separado de configuracao.
-- Salve artefatos sempre da mesma forma: modelos, plots e tabelas com nomes previsiveis.
-
-5. Padrao recomendado de trabalho
-
-Fluxo ideal:
-1. `src/` concentra toda a logica.
-2. `notebooks/` chamam funcoes prontas.
-3. `models/` guarda artefatos treinados.
-4. `plots/` guarda imagens geradas.
-5. `reports/` guarda tabelas, JSONs e relatorios finais.
-
-6. Principais problemas que eu vi na estrutura atual
-
-- Repeticao de imports no mesmo notebook.
-- Repeticao de funcoes e classes em mais de um bloco.
-- Mistura de definicao de modelo com execucao de experimento.
-- Mistura de preprocessamento, treino, avaliacao e salvamento no mesmo lugar.
-- Arquivos de notebook grandes demais para manutencao simples.
-
-7. Prioridade pratica para reorganizar
-
-Se quiser fazer isso com risco baixo, siga esta ordem:
-- Primeiro: mover funcoes pequenas para `utils.py`.
-- Segundo: mover preprocessamento para `preprocessing.py`.
-- Terceiro: mover modelos para `models.py`.
-- Quarto: mover treino e avaliacao para `training.py` e `evaluation.py`.
-- Quinto: limpar os notebooks para deixarem so a orquestracao.
-
-8. Resultado esperado
-
-Depois dessa separacao, o projeto deve ficar:
-- Mais facil de entender.
-- Mais facil de testar.
-- Mais facil de reutilizar em novos experimentos.
-- Menos sujeito a erro por copia e cola.
-- Mais profissional e alinhado com padroes comuns de engenharia de software e data science.
-
-9. Observacao final
-
-Minha recomendacao mais importante e simples: mantenha os notebooks apenas como camada de execucao e narrativa, e mova toda logica repetida para arquivos `.py` dentro de `src/`.
