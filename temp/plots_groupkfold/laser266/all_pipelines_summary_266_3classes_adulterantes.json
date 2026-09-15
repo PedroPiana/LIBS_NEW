@@ -1,0 +1,100 @@
+{
+  "experiment": "stratified_groupkfold_266_3classes_adulterantes",
+  "laser": 266,
+  "labels": [
+    "A",
+    "C",
+    "R"
+  ],
+  "n_splits": 8,
+  "pipelines": [
+    {
+      "pipeline": "snv_svm_linear",
+      "laser": 266,
+      "labels": [
+        "A",
+        "C",
+        "R"
+      ],
+      "n_splits": 8,
+      "accuracy_scores": [
+        1.0,
+        1.0,
+        0.8933333333333333,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        0.755
+      ],
+      "mean_accuracy": 0.9560416666666667,
+      "std_accuracy": 0.0836242318516456
+    },
+    {
+      "pipeline": "snv_random_forest",
+      "laser": 266,
+      "labels": [
+        "A",
+        "C",
+        "R"
+      ],
+      "n_splits": 8,
+      "accuracy_scores": [
+        0.9133333333333333,
+        0.9966666666666667,
+        0.9366666666666666,
+        0.9966666666666667,
+        0.9078341013824884,
+        1.0,
+        1.0,
+        0.865
+      ],
+      "mean_accuracy": 0.9520209293394778,
+      "std_accuracy": 0.04980972237028474
+    },
+    {
+      "pipeline": "savgol_snv_svm_linear",
+      "laser": 266,
+      "labels": [
+        "A",
+        "C",
+        "R"
+      ],
+      "n_splits": 8,
+      "accuracy_scores": [
+        1.0,
+        1.0,
+        0.9233333333333333,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        0.73
+      ],
+      "mean_accuracy": 0.9566666666666667,
+      "std_accuracy": 0.0892717449389472
+    },
+    {
+      "pipeline": "savgol_snv_random_forest",
+      "laser": 266,
+      "labels": [
+        "A",
+        "C",
+        "R"
+      ],
+      "n_splits": 8,
+      "accuracy_scores": [
+        0.9666666666666667,
+        0.9933333333333333,
+        0.9333333333333333,
+        0.9933333333333333,
+        0.9124423963133641,
+        0.9966666666666667,
+        1.0,
+        0.87
+      ],
+      "mean_accuracy": 0.9582219662058372,
+      "std_accuracy": 0.04508139396864833
+    }
+  ]
+}
