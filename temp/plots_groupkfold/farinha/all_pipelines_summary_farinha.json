@@ -1,0 +1,75 @@
+{
+  "experiment": "stratified_groupkfold_farinha",
+  "laser": 1,
+  "labels": [
+    "Argentina",
+    "Brasileira"
+  ],
+  "n_splits": 3,
+  "pipelines": [
+    {
+      "pipeline": "snv_svm_linear",
+      "laser": 1,
+      "labels": [
+        "Argentina",
+        "Brasileira"
+      ],
+      "n_splits": 3,
+      "accuracy_scores": [
+        0.9841269841269841,
+        0.9801587301587301,
+        0.9166666666666666
+      ],
+      "mean_accuracy": 0.9603174603174603,
+      "std_accuracy": 0.030908257792454815
+    },
+    {
+      "pipeline": "snv_random_forest",
+      "laser": 1,
+      "labels": [
+        "Argentina",
+        "Brasileira"
+      ],
+      "n_splits": 3,
+      "accuracy_scores": [
+        0.9325396825396826,
+        0.9365079365079365,
+        0.8095238095238095
+      ],
+      "mean_accuracy": 0.8928571428571429,
+      "std_accuracy": 0.058947830569198924
+    },
+    {
+      "pipeline": "standard_scaler_svm_linear",
+      "laser": 1,
+      "labels": [
+        "Argentina",
+        "Brasileira"
+      ],
+      "n_splits": 3,
+      "accuracy_scores": [
+        0.9682539682539683,
+        1.0,
+        0.8492063492063492
+      ],
+      "mean_accuracy": 0.9391534391534392,
+      "std_accuracy": 0.0649092282877529
+    },
+    {
+      "pipeline": "standard_scaler_random_forest",
+      "laser": 1,
+      "labels": [
+        "Argentina",
+        "Brasileira"
+      ],
+      "n_splits": 3,
+      "accuracy_scores": [
+        0.9563492063492064,
+        0.9404761904761905,
+        0.7817460317460317
+      ],
+      "mean_accuracy": 0.8928571428571428,
+      "std_accuracy": 0.07883420331085365
+    }
+  ]
+}
