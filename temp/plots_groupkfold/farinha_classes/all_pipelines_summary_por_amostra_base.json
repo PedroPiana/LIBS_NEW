@@ -1,0 +1,47 @@
+{
+  "experiment": "stratified_groupkfold_por_amostra_base",
+  "laser": 1,
+  "labels": [
+    "Argentina",
+    "Brasileira"
+  ],
+  "n_splits": 5,
+  "pipelines": [
+    {
+      "pipeline": "snv_scaler_svm_linear",
+      "laser": 1,
+      "labels": [
+        "Argentina",
+        "Brasileira"
+      ],
+      "n_splits": 5,
+      "accuracy_scores": [
+        1.0,
+        0.9861111111111112,
+        0.9930555555555556,
+        1.0,
+        0.9930555555555556
+      ],
+      "mean_accuracy": 0.9944444444444445,
+      "std_accuracy": 0.005196746370519345
+    },
+    {
+      "pipeline": "snv_scaler_random_forest",
+      "laser": 1,
+      "labels": [
+        "Argentina",
+        "Brasileira"
+      ],
+      "n_splits": 5,
+      "accuracy_scores": [
+        0.9111111111111111,
+        0.8541666666666666,
+        0.8611111111111112,
+        0.9722222222222222,
+        0.5694444444444444
+      ],
+      "mean_accuracy": 0.8336111111111112,
+      "std_accuracy": 0.1386954208079215
+    }
+  ]
+}
