@@ -5,71 +5,43 @@
     "Argentina",
     "Brasileira"
   ],
-  "n_splits": 3,
+  "n_splits": 5,
   "pipelines": [
     {
-      "pipeline": "snv_svm_linear",
+      "pipeline": "snv_scaler_svm_linear",
       "laser": 1,
       "labels": [
         "Argentina",
         "Brasileira"
       ],
-      "n_splits": 3,
+      "n_splits": 5,
       "accuracy_scores": [
-        0.9642857142857143,
-        0.8571428571428571,
-        0.876984126984127
+        1.0,
+        0.9861111111111112,
+        0.9930555555555556,
+        1.0,
+        0.9930555555555556
       ],
-      "mean_accuracy": 0.8994708994708995,
-      "std_accuracy": 0.04654130181417775
+      "mean_accuracy": 0.9944444444444445,
+      "std_accuracy": 0.005196746370519345
     },
     {
-      "pipeline": "snv_random_forest",
+      "pipeline": "snv_scaler_random_forest",
       "laser": 1,
       "labels": [
         "Argentina",
         "Brasileira"
       ],
-      "n_splits": 3,
+      "n_splits": 5,
       "accuracy_scores": [
-        0.8134920634920635,
-        0.8849206349206349,
-        0.7698412698412699
+        0.9111111111111111,
+        0.8541666666666666,
+        0.8611111111111112,
+        0.9722222222222222,
+        0.5694444444444444
       ],
-      "mean_accuracy": 0.8227513227513228,
-      "std_accuracy": 0.04743497639428861
-    },
-    {
-      "pipeline": "standard_scaler_svm_linear",
-      "laser": 1,
-      "labels": [
-        "Argentina",
-        "Brasileira"
-      ],
-      "n_splits": 3,
-      "accuracy_scores": [
-        0.9801587301587301,
-        0.8650793650793651,
-        0.9325396825396826
-      ],
-      "mean_accuracy": 0.9259259259259259,
-      "std_accuracy": 0.04721314364437761
-    },
-    {
-      "pipeline": "standard_scaler_random_forest",
-      "laser": 1,
-      "labels": [
-        "Argentina",
-        "Brasileira"
-      ],
-      "n_splits": 3,
-      "accuracy_scores": [
-        0.8650793650793651,
-        0.8055555555555556,
-        0.9444444444444444
-      ],
-      "mean_accuracy": 0.8716931216931217,
-      "std_accuracy": 0.05689368562858878
+      "mean_accuracy": 0.8336111111111112,
+      "std_accuracy": 0.1386954208079215
     }
   ]
 }

@@ -2,6 +2,9 @@
 /models/
 /models_*/
 
+# modelos
+*.joblib
+
 # Notebook artifacts
 .ipynb_checkpoints/
 

@@ -1,0 +1,14 @@
+{
+  "best_params": {
+    "model__C": 0.1,
+    "model__class_weight": null
+  },
+  "best_score": 0.9944444444444445,
+  "cv_folds": 5,
+  "grouping": "groups_classes (amostra-base)",
+  "preprocessing": [
+    "snv",
+    "standard_scaler"
+  ],
+  "model": "SVC(kernel=linear, gamma=scale)"
+}
