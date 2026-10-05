@@ -1,0 +1,48 @@
+{
+  "experiment": "stratified_groupkfold_266_3classes_adulterantes_dev80",
+  "laser": 266,
+  "labels": [
+    "A",
+    "C",
+    "R"
+  ],
+  "n_splits": 4,
+  "pipelines": [
+    {
+      "pipeline": "snv_svm_linear",
+      "laser": 266,
+      "labels": [
+        "A",
+        "C",
+        "R"
+      ],
+      "n_splits": 4,
+      "accuracy_scores": [
+        1.0,
+        0.9375,
+        0.99,
+        0.91
+      ],
+      "mean_accuracy": 0.9593750000000001,
+      "std_accuracy": 0.037096790629379234
+    },
+    {
+      "pipeline": "snv_scaler_svm_linear",
+      "laser": 266,
+      "labels": [
+        "A",
+        "C",
+        "R"
+      ],
+      "n_splits": 4,
+      "accuracy_scores": [
+        1.0,
+        0.995,
+        0.9975,
+        1.0
+      ],
+      "mean_accuracy": 0.998125,
+      "std_accuracy": 0.0020728904939721227
+    }
+  ]
+}
