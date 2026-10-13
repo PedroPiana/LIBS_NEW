@@ -1,0 +1,120 @@
+{
+  "experiment": "stratified_groupkfold_266_3classes_adulterantes",
+  "laser": 266,
+  "labels": [
+    "A",
+    "C",
+    "R"
+  ],
+  "n_splits": 4,
+  "pipelines": [
+    {
+      "pipeline": "snv_scaler_svm_linear",
+      "laser": 266,
+      "labels": [
+        "A",
+        "C",
+        "R"
+      ],
+      "n_splits": 4,
+      "accuracy_scores": [
+        1.0,
+        1.0,
+        1.0,
+        0.982
+      ],
+      "mean_accuracy": 0.9955,
+      "std_accuracy": 0.007794228634059955
+    },
+    {
+      "pipeline": "snv_scaler_svm_rbf",
+      "laser": 266,
+      "labels": [
+        "A",
+        "C",
+        "R"
+      ],
+      "n_splits": 4,
+      "accuracy_scores": [
+        0.9922630560928434,
+        0.875,
+        0.936,
+        0.936
+      ],
+      "mean_accuracy": 0.9348157640232109,
+      "std_accuracy": 0.041475660999891105
+    },
+    {
+      "pipeline": "snv_scaler_svm_poly",
+      "laser": 266,
+      "labels": [
+        "A",
+        "C",
+        "R"
+      ],
+      "n_splits": 4,
+      "accuracy_scores": [
+        0.8104448742746615,
+        0.5916666666666667,
+        0.562,
+        0.588
+      ],
+      "mean_accuracy": 0.638027885235332,
+      "std_accuracy": 0.10019981203953951
+    },
+    {
+      "pipeline": "standard_scaler_svm_linear",
+      "laser": 266,
+      "labels": [
+        "A",
+        "C",
+        "R"
+      ],
+      "n_splits": 4,
+      "accuracy_scores": [
+        0.9980657640232108,
+        0.995,
+        0.996,
+        0.962
+      ],
+      "mean_accuracy": 0.9877664410058027,
+      "std_accuracy": 0.014917283651488668
+    },
+    {
+      "pipeline": "standard_scaler_svm_rbf",
+      "laser": 266,
+      "labels": [
+        "A",
+        "C",
+        "R"
+      ],
+      "n_splits": 4,
+      "accuracy_scores": [
+        0.9555125725338491,
+        0.855,
+        0.902,
+        0.89
+      ],
+      "mean_accuracy": 0.9006281431334623,
+      "std_accuracy": 0.036086934803822704
+    },
+    {
+      "pipeline": "standard_scaler_svm_poly",
+      "laser": 266,
+      "labels": [
+        "A",
+        "C",
+        "R"
+      ],
+      "n_splits": 4,
+      "accuracy_scores": [
+        0.8529980657640233,
+        0.6316666666666667,
+        0.684,
+        0.68
+      ],
+      "mean_accuracy": 0.7121661831076725,
+      "std_accuracy": 0.08387757227998906
+    }
+  ]
+}
